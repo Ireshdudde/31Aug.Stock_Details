@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -23,8 +24,20 @@
     body {
       font-family: 'Segoe UI', sans-serif;
       background-color: var(--bg);
-      display: flex;
       min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 40px 20px;
+    }
+
+    .wrapper {
+      max-width: 1200px;
+      width: 100%;
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
     }
 
     .container {
@@ -162,31 +175,33 @@
   </style>
 </head>
 <body>
-  <div class="container">
-    <div class="sidebar">
-      <div class="date">31 Aug 2025</div>
-      <h2>Locations</h2>
-      <div class="location" onclick="loadStock('savda')">1. Savda</div>
-      <div class="location" onclick="loadStock('jamner')">2. Jamner</div>
-      <div class="location" onclick="loadStock('shirpurchopada')">3. Shirpur_Chopada</div>
-    </div>
-
-    <div class="content">
-      <h2 id="locationTitle">Select a location to view stock</h2>
-
-      <div class="section" id="inwardSection">
-        <h3>Inward</h3>
-        <div class="cards" id="inwardCards"></div>
+  <div class="wrapper">
+    <div class="container">
+      <div class="sidebar">
+        <div class="date">31 Aug 2025</div>
+        <h2>Locations</h2>
+        <div class="location" onclick="loadStock('savda')">1. Savda</div>
+        <div class="location" onclick="loadStock('jamner')">2. Jamner</div>
+        <div class="location" onclick="loadStock('shirpurchopada')">3. Shirpur_Chopada</div>
       </div>
 
-      <div class="section" id="outwardSection">
-        <h3>Outward</h3>
-        <div class="cards" id="outwardCards"></div>
-      </div>
+      <div class="content">
+        <h2 id="locationTitle">Select a location to view stock</h2>
 
-      <div class="section" id="balanceSection">
-        <h3>Balance</h3>
-        <div class="cards" id="balanceCards"></div>
+        <div class="section" id="inwardSection">
+          <h3>Inward</h3>
+          <div class="cards" id="inwardCards"></div>
+        </div>
+
+        <div class="section" id="outwardSection">
+          <h3>Outward</h3>
+          <div class="cards" id="outwardCards"></div>
+        </div>
+
+        <div class="section" id="balanceSection">
+          <h3>Balance</h3>
+          <div class="cards" id="balanceCards"></div>
+        </div>
       </div>
     </div>
   </div>
